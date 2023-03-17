@@ -1,13 +1,13 @@
 # CellAnn shinyapp
 
-### version 
+### Version 
 1.0
 
-### what is CellAnn ?
+### What is CellAnn ?
 
 CellAnn is a web application for predicting cell types of single-cell clusters based on published reference datasets. CellAnn provides a comprehensive scRNA-seq reference database and users can easily find the relevant reference datasets in their analysis.
 
-### installation 
+### Installation 
 
 1. Click on the green "Code" button on the right-hand side of this page. 
 
@@ -18,7 +18,7 @@ CellAnn is a web application for predicting cell types of single-cell clusters b
 4. After downloading is finished, unzip the CellAnn_version1.0.zip* files 
 
 
-### run CellAnn 
+### Run CellAnn 
 
 1. Please make sure you have installed the shiny package in R
 
