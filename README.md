@@ -6,10 +6,14 @@ CellAnn is a web application for predicting cell types of single-cell clusters b
 
 ### installation 
 
-Click on the green "Code" button on the right-hand side of this page. \\
-Click on "Download ZIP" from the drop-down menu. \\
-Your browser should start downloading a ZIP file containing the entire CellAnn repository. \\
-After Downloading finished, unzip the CellAnn_version1.0.zip* files \\
+Click on the green "Code" button on the right-hand side of this page. 
+
+Click on "Download ZIP" from the drop-down menu. 
+
+Your browser should start downloading a ZIP file containing the entire CellAnn repository. 
+
+After Downloading finished, unzip the CellAnn_version1.0.zip* files 
+
 
 ### run CellAnn 
 
