@@ -16,6 +16,8 @@ CellAnn is a web application for predicting cell types of single-cell clusters b
 ```shell
 cd your_folder
 git clone https://github.com/Pinlyu3/CellAnn_shinyapp.git
+cd CellAnn_shinyapp
+
 ```
 
 ### Run CellAnn 
