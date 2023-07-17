@@ -84,8 +84,12 @@ def cluster_average(adata,sample_name):
   Output_Step1_name = sample_name + '_CellAnn_Step1_input.txt'
   df_log.to_csv(Output_Step1_name, index=False,sep='\t')
   ####
+  df_umap = pd.DataFrame(adata.obsm['X_umap'])
+  df_umap.columns = ["dim1","dim2"]
+  df_umap.insert(0,"cell",cell_names)
+  df_umap.insert(1,"cluster",row_annotations)
   Output_Step4_name = sample_name + '_CellAnn_Step4_input.txt'
-  
+  df_umap.to_csv(Output_Step4_name, index=False,sep='\t')
 
 ### run cluster_average with your adata to get the input of step1 and step4:
 cluster_average(adata,sample_name="your_sample_name")
