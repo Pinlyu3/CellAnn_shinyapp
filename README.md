@@ -38,8 +38,21 @@ list.files(folder)
 ```
 
 ### for Python scanpy users:
+```python
+### load library and your query datasets: 
+import scanpy as sc
+import pandas as pd
 
+### Calculate the average gene expression within each cluster
+### we assume that the raw counts are stored in adata.raw.X
+cluster_avg = pd.DataFrame(adata.raw.X.mean(axis=0), index=adata.raw.var_names, columns=['Average Expression'])
 
+cluster_avg.index.name = 'Gene'
+
+### write the results to txt:
+cluster_avg.to_csv('cluster_avg.txt', sep='\t')
+
+```
 ## run CellAnn on your local computer
 ### Installation 
 
