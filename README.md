@@ -49,8 +49,11 @@ cluster_avg = pd.DataFrame(adata.raw.X.mean(axis=0), index=adata.raw.var_names, 
 
 cluster_avg.index.name = 'Gene'
 
-### write the results to txt:
+### write the step1 input (average expression matrix) to txt:
 cluster_avg.to_csv('cluster_avg.txt', sep='\t')
+
+### write the step4 input (UMAP for each cell) to txt:
+
 
 ```
 ## run CellAnn on your local computer
