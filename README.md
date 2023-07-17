@@ -43,20 +43,24 @@ list.files(folder)
 ## run CellAnn on your local computer
 ### Installation 
 
-1. Click on the green "Code" button on the right-hand side of this page. 
+1. Make sure that Git is already installed.
 
-2. Click on "Download ZIP" from the drop-down menu. 
+2. Install git-lfs.
 
-3. Your browser should start downloading a ZIP file containing the entire CellAnn repository. 
-
-4. After downloading is finished, unzip the CellAnn_version1.0.zip* files 
-
+```shell
+cd your_folder
+git clone https://github.com/Pinlyu3/CellAnn_shinyapp.git
+cd CellAnn_shinyapp
+cat  CellAnn_version1.0.zip* > CellAnn_version1.0.zip
+unzip CellAnn_version1.0.zip
+cd CellAnn_version1\ copy
+```
 
 ### Run CellAnn 
 
 1. Please make sure you have installed the shiny package in R
 
-2. cd to your folder where you unzip the CellAnn_version1.0.zip* files 
+2. cd to your folder where you unzip the CellAnn_version1.0.zip* files (cd CellAnn_version1\ copy)
 
 3. run the webserver on your local computer with the following commands:
 
