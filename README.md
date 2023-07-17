@@ -49,7 +49,7 @@ adata = sc.read('data.h5ad')
 ### the cluster information stored in adata.obs['cluster']: 
 ### the gene_names stored in adata.var_names
 ### the cell name stored in adata.obs_names
-### the UMAP information strored in 
+### the 2 dimension UMAPs strored in adata.obsm['X_umap']
 ### parameter: sample_name(character): names of this sample, such as "Liver_1"
 
 def cluster_average(adata,sample_name):
