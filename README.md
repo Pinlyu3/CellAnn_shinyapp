@@ -7,6 +7,40 @@
 
 CellAnn is a web application for predicting cell types of single-cell clusters based on published reference datasets. CellAnn provides a comprehensive scRNA-seq reference database and users can easily find the relevant reference datasets in their analysis.
 
+
+## Prepare query datasets 
+### for R seurat users:
+1.Install devtools (for installing GitHub packages) if it isn't already installed.
+```{r}
+### install devtools in R ###
+if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
+```
+2.Prepare your Seurat object with "prepare_CellAnn" function.
+
+```{r}
+### download scripts ###
+
+devtools::source_url("https://raw.githubusercontent.com/Pinlyu3/CellAnn/main/prepare_CellAnn.R")
+
+### prepare_CellAnn function:
+### parameter: seurat_obj: your seurat obj
+### parameter: folder(character): CellAnn ouput files will be output to this path, default is your current folder
+### parameter: sample_name(character): names of this sample, such as "Liver_1", "eye2_2" etc.
+### parameter: matrix_name(character): default will use the "RNA" counts matrix in your seurat object
+### parameter: dims(character): "umap" or "tsne". default is 'umap'
+### parameter: cluster(character): the name of the column which stored cluster information in the metadata of your Seurat object. default is 'seurat_clusters'
+
+prepare_CellAnn(seurat_obj,folder=folder,sample_name='your_samples_name',matrix_name='RNA',dims='umap',cluster='seurat_clusters')
+
+### After run prepare_CellAnn function, you will find 2 prepared files under your folder 
+
+list.files(folder)
+```
+
+### for Python scanpy users:
+
+
+## run CellAnn on your local computer
 ### Installation 
 
 1. Click on the green "Code" button on the right-hand side of this page. 
