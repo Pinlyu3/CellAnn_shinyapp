@@ -96,31 +96,15 @@ cluster_average(adata,sample_name="your_sample_name")
 
 ```
 ## run CellAnn on your local computer
-### Installation 
 
-1. Make sure that Git is already installed.
+1. Download the CellAnn_shinyapp-main.zip file and unzip.
 
-2. Install git-lfs.
+2. cd to your unzip folder (CellAnn_shinyapp-main) and unzip the CellAnn_version1.0.zip file.
 
-```shell
-cd your_folder
-git clone https://github.com/Pinlyu3/CellAnn_shinyapp.git
-cd CellAnn_shinyapp
-cat  CellAnn_version1.0.zip* > CellAnn_version1.0.zip
-unzip CellAnn_version1.0.zip
-cd CellAnn_version1\ copy
-```
-
-### Run CellAnn 
-
-1. Please make sure you have installed the shiny package in R
-
-2. cd to your folder where you unzip the CellAnn_version1.0.zip* files (cd CellAnn_version1\ copy)
-
-3. run the webserver on your local computer with the following commands:
+3. cd to your unzip folder (Cell_Ann_bioinfo) and run the webserver on your local computer with the following commands:
 
 ```shell
-cd your_unzip_folder
+cd /your_unzip_path/Cell_Ann_bioinfo
 R -e "shiny::runApp('~/')"
 ```
 
