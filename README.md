@@ -95,17 +95,35 @@ def cluster_average(adata,sample_name):
 cluster_average(adata,sample_name="your_sample_name")
 
 ```
-## run CellAnn on your local computer
+## Run CellAnn on your local computer
 
-1. Download the CellAnn_shinyapp-main.zip file and unzip.
+1. Clone this repository.
 
-2. cd to your unzip folder (CellAnn_shinyapp-main) and unzip the CellAnn_version1.0.zip file.
+2. `cd` to into the new clone. Initialize Git LFS 
+```bash
+git lfs install
+```
+3. Fetch LFS objects
+```bash
+git lfs pull
+```
+4. Unzip the `CellAnn_version1.0.zip` file. This file is compressed with the LZMA algorithm, therefore, you will need to use a program like [7z](https://www.7-zip.org/download.html) to decompress it. In a *nix system, you can achieve this with a command like this:
 
-3. cd to your unzip folder (Cell_Ann_bioinfo) and run the webserver on your local computer with the following commands:
+```bash
+7z x CellAnn_version1.0.zip
+```
+
+5. Install CellAnn dependencies:
+
+```bash
+R -e "install.packages(c('shiny', 'shinyBS', 'DT', 'ggplot2', 'plotly', 'shinyjs', 'data.table', 'tibble', 'stringr', 'shinyFeedback', 'tibble', 'limma', 'pcaPP', 'shinyWidgets', 'bslib', 'shinybusy', 'markdown', 'BiocManager')); BiocManager::install('limma')"
+```
+
+6. cd to your unzip folder (Cell_Ann_bioinfo) and run the webserver on your local computer with the following commands:
 
 ```shell
 cd /your_unzip_path/Cell_Ann_bioinfo
-R -e "shiny::runApp('~/')"
+R -e "shiny::runApp('.')"
 ```
 
 ### Note 
